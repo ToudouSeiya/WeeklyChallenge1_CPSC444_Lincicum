@@ -29,6 +29,14 @@ const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
 body.position.z=0.05;
 scene.add(body);
 
+const bodyStripeGeometry = new THREE.CylinderGeometry(0.6, 0.62, 0.5, 16);
+const bodyStripeMaterial = new THREE.MeshBasicMaterial({
+    color: "rgb(86, 0, 0)"
+});
+const bodyStripe = new THREE.Mesh(bodyStripeGeometry, bodyStripeMaterial);
+bodyStripe.position.set(0, -1.5, 0.025);
+scene.add(bodyStripe);
+
 
 // Nose Cone
 
